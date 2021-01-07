@@ -4,11 +4,10 @@ on: [push]
 jobs:
   test:
     name: Run TestCafe Tests
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Run tests
         uses: DevExpress/testcafe-action@latest
-        with:
-            args: "chrome tests"  
+          
