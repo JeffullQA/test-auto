@@ -3,11 +3,12 @@ on: [push]
 
 jobs:
   test:
-    name: Run TestCafe Tests
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
       - name: Run tests
         uses: DevExpress/testcafe-action@latest
+      - name: Run a one-line script
+        run: echo Hello, world!  
           
